@@ -1,4 +1,4 @@
-package com.android.habitapplication.ui.slideshow
+package com.android.habitapplication.ui.your_states
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -10,4 +10,14 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile">Profile</string>
+    <string name="today">Today</string>
+    <string name="your_states">Your states</string>
+    <string name="challenges">Challenges</string>
+    <string name="all_habits">All Habits</string>
+    <string name="notification">Notification</string>
+    <string name="settings">Settings</string>
+    <string name="try_free">Try Free</string>
 </resources>

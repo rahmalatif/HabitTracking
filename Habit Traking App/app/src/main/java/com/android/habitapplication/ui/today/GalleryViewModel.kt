@@ -1,4 +1,4 @@
-package com.android.habitapplication.ui.gallery
+package com.android.habitapplication.ui.today
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,4 +1,4 @@
-package com.android.habitapplication.ui.home
+package com.android.habitapplication.ui.profile
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
