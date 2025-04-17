@@ -13,6 +13,24 @@
         android:theme="@style/Theme.HabitApplication"
         tools:targetApi="31">
         <activity
+            android:name=".HabitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChooseHabitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProcrastieActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".ProcrastieActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EveningSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MorningSelectionActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
