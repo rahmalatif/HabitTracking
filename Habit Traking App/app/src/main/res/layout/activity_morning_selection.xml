@@ -5,14 +5,62 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_pink"
+    android:padding="16dp"
     tools:context=".MorningSelectionActivity">
 
+
     <TextView
+        android:id="@+id/morning_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="What's time do you
-usually wake up?"
-        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/rubik_semibold"
+        android:text="What's time do you usually wake up?"
+        android:textColor="#3F414E"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/sun_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sun_cropped"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/morning_tv" />
+
+    <ImageView
+        android:id="@+id/tree_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tree"
+        app:layout_constraintBottom_toBottomOf="@id/sun_iv"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TimePicker
+        android:id="@+id/time_pk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sun_iv" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/white"
+        android:padding="16dp"
+        android:text="GET STARTED"
+        android:textColor="#292929"
+        app:cornerRadius="99dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/time_pk" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
