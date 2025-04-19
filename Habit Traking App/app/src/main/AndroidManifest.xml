@@ -13,6 +13,9 @@
         android:theme="@style/Theme.HabitApplication"
         tools:targetApi="31">
         <activity
+            android:name=".ChallengeCongratesActivity"
+            android:exported="false" />
+        <activity
             android:name=".HabitActivity"
             android:exported="false" />
         <activity
