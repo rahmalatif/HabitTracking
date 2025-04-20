@@ -143,18 +143,27 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
 
+    android:orientation="horizontal">
     <androidx.cardview.widget.CardView
+        android:id="@+id/price_card1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        app:cardCornerRadius="12dp">
+        android:layout_margin="5dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:padding="8dp">
 
             <TextView
                 android:id="@+id/price1"
@@ -173,7 +182,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik_medium"
-                android:text="6-month plan for 39.99 usd"
+                android:textAlignment="center"
+                android:text="@string/_6_month_plan_for_39_99_usd"
                 android:textColor="#774A4A4A"
                 android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -198,10 +208,14 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/price_card2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toEndOf="@id/price_card1"
+        app:layout_constraintTop_toTopOf="parent"
         app:cardCornerRadius="12dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -211,12 +225,13 @@
 
             <TextView
                 android:id="@+id/most_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="129dp"
+                android:layout_height="23dp"
                 android:background="#4A4A4A"
-                android:text="Most Popular"
-                android:textColor="#573353"
                 android:fontFamily="@font/rubik_bold"
+                android:text="Most Popular"
+                android:textAlignment="center"
+                android:textColor="#573353"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -237,7 +252,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik_medium"
-                android:text="6-month plan for 39.99 usd"
+                android:textAlignment="center"
+                android:text="@string/_6_month_plan_for_39_99_usd"
                 android:textColor="#774A4A4A"
                 android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -262,15 +278,20 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/price_card3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/price_card2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="5dp"
         app:cardCornerRadius="12dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="8dp"
             android:layout_gravity="center">
 
             <TextView
@@ -290,7 +311,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/rubik_medium"
-                android:text="6-month plan for 39.99 usd"
+                android:textAlignment="center"
+                android:text="@string/_6_month_plan_for_39_99_usd"
                 android:textColor="#774A4A4A"
                 android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -313,5 +335,7 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </LinearLayout>

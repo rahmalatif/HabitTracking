@@ -5,6 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.android.habitapplication.Habit
+import com.android.habitapplication.HabitAdapter
 import com.android.habitapplication.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -34,9 +39,26 @@ class AllHabitsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_all_habits, container, false)
+
+        val rootView = inflater.inflate(R.layout.fragment_all_habits, container, false)
+        val recyclerView = rootView.findViewById<RecyclerView>(R.id.rv)
+
+        val habits = listOf(
+            Habit("Drink Water", R.drawable.water_cup, 75),
+            Habit("Morning Walk", R.drawable.walking_vector, 40),
+            Habit("Cycling", R.drawable.cycling_vector_small, 90),
+            Habit("Reading", R.drawable.book, 60)
+        )
+
+        recyclerView.layoutManager = GridLayoutManager(requireContext(), 2)
+        recyclerView.adapter = HabitAdapter(habits) { habit ->
+            Toast.makeText(requireContext(), "Clicked: ${habit.name}", Toast.LENGTH_SHORT).show()
+        }
+
+        return rootView
     }
+
+
 
     companion object {
         /**
