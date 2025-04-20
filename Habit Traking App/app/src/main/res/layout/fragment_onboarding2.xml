@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="24dp"
-    tools:context=".ui.onboarding.onboarding2">
+    tools:context=".ui.onboarding.Onboarding2">
 
     <ImageView
         android:id="@+id/onboardingPhoto1"

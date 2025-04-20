@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.splash.mainsplash">
+    tools:context=".ui.splash.MainSplash">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

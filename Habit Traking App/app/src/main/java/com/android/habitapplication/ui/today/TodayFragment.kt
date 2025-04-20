@@ -28,7 +28,7 @@ class TodayFragment : Fragment() {
         _binding = FragmentTodayBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textGallery
+        val textView: TextView = binding.todayText
         galleryViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }

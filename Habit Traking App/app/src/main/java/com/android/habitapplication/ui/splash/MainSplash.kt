@@ -1,20 +1,20 @@
-package com.example.myparthabittracking.ui.splash
+package com.android.habitapplication.ui.splash
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.myparthabittracking.ARG_PARAM1
-import com.example.myparthabittracking.ARG_PARAM2
-import com.example.myparthabittracking.R
+import com.android.habitapplication.R
 
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
- * Use the [splashpage.newInstance] factory method to
+ * Use the [MainSplash.newInstance] factory method to
  * create an instance of this fragment.
  */
-class splashpage : Fragment() {
+class MainSplash : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -32,7 +32,7 @@ class splashpage : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_splashpage, container, false)
+        return inflater.inflate(R.layout.fragment_mainsplash, container, false)
     }
 
     companion object {
@@ -42,12 +42,12 @@ class splashpage : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment splashpage.
+         * @return A new instance of fragment mainsplash.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            splashpage().apply {
+            MainSplash().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

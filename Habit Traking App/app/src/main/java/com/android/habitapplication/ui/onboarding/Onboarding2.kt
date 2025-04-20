@@ -1,20 +1,20 @@
-package com.example.myparthabittracking.ui.onboarding
+package com.android.habitapplication.ui.onboarding
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.myparthabittracking.ARG_PARAM1
-import com.example.myparthabittracking.ARG_PARAM2
-import com.example.myparthabittracking.R
+import com.android.habitapplication.R
 
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
- * Use the [onboarding2.newInstance] factory method to
+ * Use the [Onboarding2.newInstance] factory method to
  * create an instance of this fragment.
  */
-class onboarding2 : Fragment() {
+class Onboarding2 : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -47,7 +47,7 @@ class onboarding2 : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            onboarding2().apply {
+            Onboarding2().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

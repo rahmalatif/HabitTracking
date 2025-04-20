@@ -1,14 +1,14 @@
-package com.example.myparthabittracking.ui.tody
+package com.android.habitapplication.ui.tody
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.myparthabittracking.ARG_PARAM1
-import com.example.myparthabittracking.ARG_PARAM2
-import com.example.myparthabittracking.R
+import com.android.habitapplication.R
 
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
  * Use the [Today.newInstance] factory method to
@@ -32,7 +32,7 @@ class Today : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_today2, container, false)
+        return inflater.inflate(R.layout.fragment_today, container, false)
     }
 
     companion object {

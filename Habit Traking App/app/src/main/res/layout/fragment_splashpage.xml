@@ -5,8 +5,8 @@
     android:id="@+id/splashRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_pink"
-    tools:context=".ui.splash.splashpage">
+    android:background="@color/light_pink"
+    tools:context=".ui.splash.SplashPage">
 
     <ImageView
         android:id="@+id/logoImage"

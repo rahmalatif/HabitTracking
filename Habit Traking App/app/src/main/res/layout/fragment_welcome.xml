@@ -7,7 +7,7 @@
     android:gravity="center_horizontal"
     android:padding="24dp"
     android:background="@color/white"
-    tools:context=".ui.splash.welcome">
+    tools:context=".ui.splash.Welcome">
 
     <!-- Welcome Title with 30px top padding -->
     <TextView
