@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/white"
-    tools:context=".ui.register.Login">
+    android:fillViewport="true"
+    tools:context=".SignupActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,22 +20,22 @@
             android:id="@+id/btnBack"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="8dp"
-            android:src="@drawable/ic_arrowback"
             android:layout_gravity="start"
             android:layout_marginBottom="32dp"
-            android:contentDescription="@string/back_button" />
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/back_button"
+            android:padding="8dp"
+            android:src="@drawable/ic_arrowback" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome!"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
+            android:layout_marginBottom="48dp"
             android:gravity="center"
-            android:layout_marginBottom="48dp" />
+            android:text="Create your account"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/etEmail"
@@ -51,7 +53,7 @@
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="24dp"
             android:background="@drawable/rounded_edittext"
             android:drawableLeft="@drawable/ic_baseline_eye_24"
             android:drawablePadding="12dp"
@@ -59,14 +61,17 @@
             android:inputType="textPassword"
             android:padding="16dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/etConfirmPassword"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginBottom="24dp"
-            android:text="Forget password ?"
-            android:textColor="@color/main_pink"
-            android:textSize="12sp" />
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/rounded_edittext"
+            android:drawableLeft="@drawable/ic_baseline_eye_24"
+            android:drawablePadding="12dp"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:padding="16dp" />
 
         <Button
             android:id="@+id/btnLogin"
@@ -76,14 +81,14 @@
             android:background="@drawable/rounded_edittext"
             android:backgroundTint="@color/main_pink"
             android:paddingVertical="14dp"
-            android:text="Log in"
+            android:text="Register"
             android:textAllCaps="true"
             android:textSize="14sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="48dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -91,13 +96,12 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginEnd="12dp"
-                android:src="@drawable/google"
-                android:contentDescription="@string/continue_with_google" />
+                android:contentDescription="@string/continue_with_google"
+                android:src="@drawable/google" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:text="CONTINUE WITH GOOGLE"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
@@ -106,24 +110,30 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginEnd="12dp"
-                android:src="@drawable/ic_facebook_icon"
-                android:contentDescription="@string/continue_with_facebook" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/gray" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="OR"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
                 android:layout_weight="1"
-                android:text="CONTINUE WITH FACEBOOK"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:background="@color/gray" />
         </LinearLayout>
 
         <LinearLayout
@@ -135,7 +145,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dont have account??"
+                android:text="ALREADY HAVE AN ACCOUNT?"
                 android:textColor="@color/gray"
                 android:textSize="12sp" />
 
@@ -143,10 +153,10 @@
                 android:id="@+id/tvSignIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SIGN Up"
+                android:text="SIGN IN"
                 android:textColor="@color/main_pink"
-                android:textStyle="bold"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>

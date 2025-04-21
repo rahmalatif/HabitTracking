@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/addHabitLayout"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:background="#FCE4EC"
+    android:background="@color/light_pink"
     android:padding="24dp"
-    tools:context=".ui.all_habits.AddHabit">
+    tools:context=".ui.all_habits.AddHabitActivity">
 
     <!-- Title -->
     <TextView

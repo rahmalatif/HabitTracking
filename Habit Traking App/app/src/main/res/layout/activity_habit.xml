@@ -5,22 +5,29 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF9F9"
     tools:context=".HabitActivity">
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back_btn"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:icon="@drawable/back_btn"
+        app:iconTint="@color/white"
+        app:iconTintMode="multiply"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <TextView
         android:id="@+id/title_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:background="@color/main_pink"
         android:fontFamily="@font/rubik_semibold"
         android:text="SET YOUR GOALS"
         android:textAlignment="center"
-        android:textColor="#3F414E"
+        android:textColor="@color/gray"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/back_btn"
         app:layout_constraintTop_toTopOf="parent" />
     <!-- Top illustration -->
     <ImageView
@@ -28,7 +35,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/main_pink"
-        android:scaleType="centerCrop"
         android:src="@drawable/large_drinking_water"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,7 +49,7 @@
         android:fontFamily="@font/rubik_semibold"
         android:text="Set your goals"
         android:textColor="#3F414E"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/banner_image" />
 
@@ -57,7 +63,8 @@
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sub_tv">
+        app:layout_constraintTop_toBottomOf="@id/sub_tv"
+        app:layout_constraintBottom_toTopOf="@id/frequency_group">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -93,6 +100,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/repeat_label"
         app:layout_constraintTop_toBottomOf="@id/goal_card">
 
         <com.google.android.material.button.MaterialButton
@@ -100,18 +108,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/main_pink"
+            android:textColor="@color/gray"
+            app:cornerRadius="16dp"
             android:text="Daily" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/main_pink"
+            android:textColor="@color/gray"
+            app:cornerRadius="16dp"
             android:layout_marginEnd="8dp"
             android:text="Weekly" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
+            android:backgroundTint="@color/main_pink"
+            android:textColor="@color/gray"
+            app:cornerRadius="16dp"
             android:layout_height="wrap_content"
             android:text="Monthly" />
     </LinearLayout>
@@ -121,11 +138,11 @@
         android:id="@+id/repeat_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_margin="24dp"
         android:text="Repeat everyday"
         android:textColor="#3F414E"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/days_container"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/frequency_group" />
 
@@ -140,26 +157,89 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintBottom_toTopOf="@id/select_end_btn"
         app:layout_constraintTop_toBottomOf="@id/repeat_label">
 
         <!-- Example day button -->
         <com.google.android.material.button.MaterialButton
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginEnd="4dp"
+            app:cornerRadius="100dp"
+            android:textColor="@color/gray"
+            android:backgroundTint="@color/main_pink"
+            android:text="S" />
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="4dp"
+            app:cornerRadius="100dp"
+            android:textColor="@color/gray"
+            android:backgroundTint="@color/main_pink"
+            android:text="M" />
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="4dp"
+            app:cornerRadius="100dp"
+            android:textColor="@color/gray"
+            android:backgroundTint="@color/main_pink"
+            android:text="T" />
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="4dp"
+            app:cornerRadius="100dp"
+            android:textColor="@color/gray"
+            android:backgroundTint="@color/main_pink"
+            android:text="W" />
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="4dp"
+            app:cornerRadius="100dp"
+            android:textColor="@color/gray"
+            android:backgroundTint="@color/main_pink"
+            android:text="F" />
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="4dp"
+            app:cornerRadius="100dp"
+            android:textColor="@color/gray"
+            android:backgroundTint="@color/main_pink"
             android:text="S" />
         <!-- Repeat for M T W T F S -->
 
     </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/select_end_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/main_pink"
+        android:text="Select End Date"
+        android:textColor="#3F414E"
+        android:textStyle="bold"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toTopOf="@id/continue_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Continue button -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/continue_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:backgroundTint="#FCEEEE"
+        android:layout_margin="25dp"
+        android:backgroundTint="@color/main_pink"
         android:text="CONTINUE"
         android:textColor="#3F414E"
         android:textStyle="bold"

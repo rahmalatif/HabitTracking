@@ -1,5 +1,6 @@
 package com.android.habitapplication.ui.today
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.android.habitapplication.databinding.FragmentTodayBinding
+import com.android.habitapplication.ui.all_habits.AddHabitActivity
+import com.android.habitapplication.ui.try_free.TryFreeFragment
 
 class TodayFragment : Fragment() {
 
@@ -22,16 +25,17 @@ class TodayFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val galleryViewModel =
-            ViewModelProvider(this).get(GalleryViewModel::class.java)
+
 
         _binding = FragmentTodayBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.todayText
-        galleryViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        binding.addBtn.setOnClickListener {
+            val intent = Intent(requireContext(), AddHabitActivity::class.java)
+            startActivity(intent)
         }
+
+
         return root
     }
 

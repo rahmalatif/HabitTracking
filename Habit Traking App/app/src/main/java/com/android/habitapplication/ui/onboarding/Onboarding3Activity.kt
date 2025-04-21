@@ -1,4 +1,4 @@
-package com.android.habitapplication
+package com.android.habitapplication.ui.onboarding
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,13 +8,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.android.habitapplication.ui.onboarding.Onboarding2Activity
+import com.android.habitapplication.MorningSelectionActivity
+import com.android.habitapplication.R
 
-class MorningSelectionActivity : AppCompatActivity() {
+class Onboarding3Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_morning_selection)
+        setContentView(R.layout.activity_onboarding3)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -24,10 +25,10 @@ class MorningSelectionActivity : AppCompatActivity() {
         supportActionBar?.hide()
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
-        val getStartedBtn = findViewById<Button>(R.id.get_started_btn)
+        val nextBtn = findViewById<Button>(R.id.next_btn)
 
-        getStartedBtn.setOnClickListener {
-            startActivity(Intent(this, EveningSelectionActivity::class.java))
+        nextBtn.setOnClickListener {
+            startActivity(Intent(this, MorningSelectionActivity::class.java))
             finish()
         }
     }

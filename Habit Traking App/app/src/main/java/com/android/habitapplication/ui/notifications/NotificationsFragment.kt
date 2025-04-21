@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.habitapplication.Notification
 import com.android.habitapplication.NotificationAdapter
 import com.android.habitapplication.R
+import com.android.habitapplication.databinding.FragmentTodayBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,7 +33,11 @@ class NotificationsFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+    private var _binding: FragmentTodayBinding? = null
 
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -47,7 +52,7 @@ class NotificationsFragment : Fragment() {
         // 3. Sample data
         val sampleList = listOf(
             Notification(R.drawable.lowebody_workout, "Your habit is on fire! 🔥", "04/19/2025"),
-            Notification(R.drawable.yoga, "You missed a day! 😬", "04/18/2025"),
+            Notification(R.drawable.yoga1, "You missed a day! 😬", "04/18/2025"),
             Notification(R.drawable.book, "Streak resumed. Great job!", "04/17/2025")
         )
 
