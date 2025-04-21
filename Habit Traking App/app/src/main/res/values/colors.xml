@@ -9,5 +9,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="light_pink">#F9F2F2</color>
     <color name="main_pink">#FFB9B9</color>
+    <color name="gray">#4A4A4A</color>
+
+<!--       <color name="gray">#090808</color> -->
+    <color name="primary_text_color">#212121</color>
 
 </resources>
